@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <CartWidget />
+        
         <ItemListContainer greeting="Hola Mundo ItemListContainer!!!" />
       </header>
     </div>
