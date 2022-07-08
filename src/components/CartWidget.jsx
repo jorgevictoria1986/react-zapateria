@@ -1,5 +1,5 @@
-import cart from "../img/cart.jpg";
-import {ShoppingCartOutlined} from "@material-ui/icons";
+import cart from "../img/cart.png";
+
 
 const CartWidget = () => {
 return (
