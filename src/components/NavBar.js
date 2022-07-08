@@ -1,4 +1,4 @@
-import CartWidget from './components/CartWidget.jsx';
+import CartWidget from './CartWidget';
 
 const NavBar = () => {
     return(
