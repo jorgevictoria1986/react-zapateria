@@ -23,14 +23,15 @@ const NavBar = () => {
       </ul>
     </div>
   </div>
-  <CartWidget />
-      
+ 
+<CartWidget />
+
 </nav>
 
 
 
 
-        </div>
+</div>
     );
 }
 

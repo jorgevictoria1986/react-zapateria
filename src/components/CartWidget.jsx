@@ -1,11 +1,12 @@
-import {Badge} from "@material-ui/core";
+import cart from "../img/cart.jpg";
 import {ShoppingCartOutlined} from "@material-ui/icons";
 
 const CartWidget = () => {
 return (
-    <Badge badgeContent={4} >
-        <ShoppingCartOutlined />
-    </Badge>
+   <div className="divCont">
+    <img src={cart} class="cart" alt="carrito" />
+    <p className="p">Ver Carrito</p>
+    </div>
 );
 
 }
