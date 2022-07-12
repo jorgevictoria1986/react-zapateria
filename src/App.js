@@ -12,7 +12,7 @@ function App() {
         <NavBar />
         
         <ItemListContainer greeting="Hola Mundo ItemListContainer!!!" />
-        <ItemCount stock="5" initial="1" />
+        <ItemCount stock={5} initial={1} />
 
       </header>
     </div>
