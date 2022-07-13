@@ -10,12 +10,16 @@ function ItemCount({stock, initial, onAdd}){
         const suma = () => {
             if (count < stock){
                 setCoutn(count +1)
+            } else{
+                console.log("No hay mas stock")
             }
         }
 
         const resta = () => {
-            if(count>0){
+            if(count>initial){
                 setCoutn(count -1)
+            } else{
+                console.log("Lo minimo a comprar es 1 unidad")
             }
         }
 

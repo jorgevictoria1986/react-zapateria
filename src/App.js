@@ -5,6 +5,8 @@ import ItemCount from './components/ItemCount';
 
 import ItemListContainer from './components/ItemListContainer';
 
+const onAdd =(param) => {console.log(`La cantidad comprada es ${param}`)}
+
 function App() {
   return (
     <div className="App">
@@ -12,7 +14,7 @@ function App() {
         <NavBar />
         
         <ItemListContainer greeting="Hola Mundo ItemListContainer!!!" />
-        <ItemCount stock={5} initial={1} />
+        <ItemCount stock={5} initial={1} onAdd={onAdd}/>
 
       </header>
     </div>
