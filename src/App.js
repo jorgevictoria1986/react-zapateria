@@ -13,7 +13,8 @@ function App() {
       <header className="App-header">
         <NavBar />
         
-        <ItemListContainer greeting="Hola Mundo ItemListContainer!!!" />
+        <ItemListContainer/>
+        
         <ItemCount stock={5} initial={1} onAdd={onAdd}/>
         {/* <ItemList items={productList} /> */}
       </header>
