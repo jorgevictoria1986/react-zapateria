@@ -1,8 +1,9 @@
 import { useState } from 'react';
+
 import products from '../data/MOCK_DATA.json'
 import ItemList from './ItemList';
 
-
+const ItemListContainer = ({ greetings }) => {
 
 const [productList, setProductList] = useState([])
 
@@ -15,5 +16,16 @@ const myPromise = new Promise((resolve, reject) => {
   myPromise.then((res) => {
      setProductList(res)
   })
+
+  return (
+    <>
+    <div>{greetings}</div>
+    <ItemList items={ productList } />
+    </>
+  )
+
+}
+
+
 
   export default ItemListContainer
