@@ -4,11 +4,11 @@ import Item from './Item'
 const ItemList = ({items}) => {
   return (
     <div>
-    {items.map (item => <Item key={item.id} product={ item } /> )}
+    {items.map (item => <Item key={item.id} product={item.tipo} talles={item.talles} image={item.image} precio={item.precio} /> )}
     </div>
   )
 }
-
+ 
 
 // const ItemList = ({ products }) => {
 //   return (
