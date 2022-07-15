@@ -16,7 +16,7 @@ function App() {
         <ItemListContainer/>
         
         <ItemCount stock={5} initial={1} onAdd={onAdd}/>
-        {/* <ItemList items={productList} /> */}
+        
       </header>
     </div>
   );

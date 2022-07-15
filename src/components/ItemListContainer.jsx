@@ -3,7 +3,7 @@ import { useState } from 'react';
 import products from '../data/MOCK_DATA.json'
 import ItemList from './ItemList';
 
-const ItemListContainer = ({ greetings }) => {
+const ItemListContainer = () => {
 
 const [productList, setProductList] = useState([])
 
@@ -19,9 +19,10 @@ const myPromise = new Promise((resolve, reject) => {
 
   return (
     <>
-    <div>{greetings}</div>
     <ItemList items={ productList } />
     </>
+    
+
   )
 
 }
