@@ -6,7 +6,7 @@ const Item = (product) => {
     <div>
         <div>{product.tipo}</div>
         <div>{product.talles}</div>
-        <img src={product.image}></img>
+        <img src={product.image} alt={product.id}></img>
         <div>{product.precio}</div>
         
     </div>

@@ -6,13 +6,13 @@ import ItemDetail from './ItemDetail';
 
 const ItemDetailCointainer = () => {
 
-const [productList, setProductList] = useState([])
+const [productList, setProductList] = useState({})
 
 const myPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(products[2]);
     }, 200);
-  })
+  }) 
 
   myPromise.then((res) => {
      setProductList(res)
@@ -20,7 +20,7 @@ const myPromise = new Promise((resolve, reject) => {
 
   return (
     <>
-    <ItemDetail items={ productList } />
+    <ItemDetail product={ productList } />
     </>
     
 
