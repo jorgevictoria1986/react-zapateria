@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import products from '../data/MOCK_DATA.json'
 import ItemList from './ItemList';
+import './ItemStyle.css'
 
 const ItemListContainer = () => {
 
@@ -20,7 +21,9 @@ const myPromise = new Promise((resolve, reject) => {
 
   return (
     <>
+    
     <ItemList items={ productList }/>
+   
     </>
     
 
