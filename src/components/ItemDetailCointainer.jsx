@@ -3,6 +3,7 @@ import { useState } from 'react';
 import products from '../data/MOCK_DATA.json'
 import ItemDetail from './ItemDetail';
 // import ItemList from './ItemList';
+import '/ItemStyle.css'
 
 const ItemDetailCointainer = () => {
 
