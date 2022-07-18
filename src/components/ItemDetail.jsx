@@ -9,9 +9,9 @@ const ItemDetail = ({product}) => {
     <><div>
             <div>{product.tipo}</div>
             <div>{product.talles}</div>
-            <img src={product.image} alt={product.id}></img>
+            <img src={`/img/${product.image}`} alt={product.id}></img>
             <div>{product.precio}</div>
-
+            {/* {`/dir1/dir2/${elemento.img}`} */}
         </div>
         <div>
         <ItemCount stock={5} initial={1} onAdd={onAdd}/>

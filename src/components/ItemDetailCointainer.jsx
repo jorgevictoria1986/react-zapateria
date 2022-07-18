@@ -10,7 +10,7 @@ const [productList, setProductList] = useState({})
 
 const myPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(products[2]);
+      resolve(products[0]);
     }, 200);
   }) 
 
