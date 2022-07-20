@@ -11,7 +11,9 @@ const [productList, setProductList] = useState({})
 
 const {id} = useParams();
 
+
 useEffect(() =>{
+
 
 
 const myPromise = new Promise((resolve, reject) => {
@@ -35,5 +37,7 @@ const myPromise = new Promise((resolve, reject) => {
   )
 
 }
+
+console.log(ItemDetailCointainer)
 
 export default ItemDetailCointainer
