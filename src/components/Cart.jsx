@@ -1,11 +1,9 @@
-const Cart =() => {
+const Cart = () => {
     return (
         <>
-        
-            <h1>I'm Cart</h1>
-
+            <h1>Carrito</h1>
         </>
     );
 }
 
-export default Cart
+export default Cart;
