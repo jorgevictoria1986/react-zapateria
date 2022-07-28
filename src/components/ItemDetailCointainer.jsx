@@ -38,6 +38,6 @@ const myPromise = new Promise((resolve, reject) => {
 
 }
 
-console.log(ItemDetailCointainer)
 
-export default ItemDetailCointainer
+
+export default ItemDetailCointainer;
