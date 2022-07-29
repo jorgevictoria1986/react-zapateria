@@ -14,6 +14,7 @@ const ItemDetail = ({ product }) => {
         setItemCount(qty);
         test.addToCart(product, qty);
     }
+   
   
     return (
    
@@ -31,12 +32,17 @@ const ItemDetail = ({ product }) => {
          itemCount === 0
         ? <ItemCount stock={5} initial={itemCount} onAdd={onAdd}/>
         : <Link to='/Cart' style={{textDecoration: 'none'}}><button variant="contained" color="secondary">CheckOut</button></Link>
- 
+           
         }
+        
+       
          </div></>
         
-
+             
     )
+   
 }
+
+
 
 export default ItemDetail
