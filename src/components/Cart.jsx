@@ -18,7 +18,7 @@ const Cart = () => {
                 <Link to='/'><TopButton>Continuar Compranado</TopButton></Link>
                 {
                     (test.cartList.length > 0)
-                    ? <TopButton type="filled" onClick={test.removeList}>Detalle de Productos</TopButton>
+                    ? <TopButton type="filled" onClick={test.removeList}>Borrar Todon</TopButton>
                     : <TopText>Carrito Vacio</TopText>
                 }
             </Top>
@@ -26,22 +26,22 @@ const Cart = () => {
                     {
                         test.cartList.length > 0 ? 
                         test.cartList.map(product => 
-                        <Product key={product.itemId}>
+                        <Product key={product.idItem}>
                         <ProductDetail>
-                            <ImageCart src={product.image} />
+                            <ImageCart src={product.imgItem} />
                             <Details>
                             <span>
-                                <b>Product:</b> {product.tipo}
+                                <b>Product:</b> {product.nameItem}
                             </span>
-                            <TopButton type="filled" onClick={() => test.deleteItem(product.itemId)}>Borrar</TopButton>
+                            <TopButton type="filled" onClick={() => test.deleteItem(product.idItem)}>Borrar</TopButton>
                             </Details>
                         </ProductDetail>
-                        {/* <PriceDetail>
+                        <PriceDetail>
                             <ProductAmountContainer>
-                            <ProductAmount>{item.qtyItem} item(s)</ProductAmount>
+                            <ProductAmount>{product.qtyItem} item(s)</ProductAmount>
                             </ProductAmountContainer>
-                            <ProductPrice>$ {product.precio} each</ProductPrice>
-                        </PriceDetail> */}
+                            <ProductPrice>$ {product.costItem} each</ProductPrice>
+                        </PriceDetail>
                         </Product>
                         )
                         : <TitleCart></TitleCart>
