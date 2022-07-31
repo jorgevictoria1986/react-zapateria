@@ -18,7 +18,7 @@ const Cart = () => {
                 <Link to='/'><TopButton>Continuar Compranado</TopButton></Link>
                 {
                     (test.cartList.length > 0)
-                    ? <TopButton type="filled" onClick={test.removeList}>Borrar Todon</TopButton>
+                    ? <TopButton type="filled" onClick={test.removeList}>Borrar Todo</TopButton>
                     : <TopText>Carrito Vacio</TopText>
                 }
             </Top>
