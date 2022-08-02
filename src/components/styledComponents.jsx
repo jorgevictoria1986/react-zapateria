@@ -286,5 +286,5 @@ export {
     Circle, Image, Info, Icon,
     DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price,
     WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice,
-    Top, TopButton, TopText, Summary, SummaryItem, SummaryTitle, SummaryItemText, SummaryItemPrice, Button
+    Top, TopButton, TopText, Summary, SummaryItem, SummaryTitle, SummaryItemText, SummaryItemPrice, Button, Bottom
 }

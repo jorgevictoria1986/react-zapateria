@@ -21,6 +21,9 @@ const CartContextProvider = ({ children }) => {
         } else {
             //al encontrarlo, entonces aumentamos el qty de ese producto
             found.qtyItem += qty;
+            setCartList([
+                ...cartList
+            ]);
         }
     }
 
@@ -35,9 +38,43 @@ const CartContextProvider = ({ children }) => {
         setCartList(result);
     }
 
+    const calcTotalPerItem = (itemId) => {
+        let index = cartList.map(product => product.itemId).indexOf(itemId);
+        return cartList[index].costItem * cartList[index].qtyItem;
+    }
+
+    const calcSubTotal = () => {
+        let totalPerItem = cartList.map(product => calcTotalPerItem(product.idItem));
+        return totalPerItem.reduce((previousValue, currentValue) => previousValue + currentValue);
+    }
+
+    const calcTaxes = () => {
+        return calcSubTotal() * 0.18;
+    }
+
+    const calcTotal = () => {
+        return calcSubTotal();
+    }
+
+    const calcItemsQty = () => {
+        let qtys = cartList.map(product => product.qtyItem);
+        return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+    }
+
 
     return (
-        <CartContext.Provider value={{cartList, addToCart, removeList, deleteItem}}>
+        <CartContext.Provider value={{
+            cartList, 
+            addToCart, 
+            removeList, 
+            deleteItem, 
+            calcTotalPerItem, 
+            calcSubTotal, 
+            calcTaxes, 
+            calcTotal,
+            calcItemsQty
+        }}>
+            
             { children }
         </CartContext.Provider>
     );
