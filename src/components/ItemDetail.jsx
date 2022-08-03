@@ -3,7 +3,7 @@ import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom'
 import { useState, useContext  } from 'react';
 import { CartContext } from './CartContext';
-
+import { TopButton } from './styledComponents';
 
 const ItemDetail = ({ product }) => {
     const [itemCount, setItemCount] = useState(0);
@@ -36,7 +36,11 @@ const ItemDetail = ({ product }) => {
         }
         
        
-         </div></>
+         </div>
+         
+         <Link to='/'><TopButton>Continuar Compranado</TopButton></Link>
+         
+         </>
         
              
     )
