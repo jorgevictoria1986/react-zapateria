@@ -1,43 +1,21 @@
-import { useState } from 'react';
-import {useParams} from 'react-router'
-import products from '../data/MOCK_DATA.json'
-import ItemDetail from './ItemDetail';
-// import ItemList from './ItemList';
-import { useEffect } from 'react';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import ItemDetail from "./ItemDetail";
+import { firestoreFetchOne } from "../utils/firestoreFetch";
 
-const ItemDetailCointainer = () => {
+const ItemDetailContainer = () => {
+    const [productList, setProductList] = useState({});
+    const { itemId } = useParams();
 
-const [productList, setProductList] = useState({})
-
-const {id} = useParams();
-
-
-useEffect(() =>{
-
-
-
-const myPromise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(products[id]);
-    }, 200);
-  }) 
-
-  myPromise.then((res) => {
-     setProductList(res)
-  })
-
-},[id])
-
-  return (
-    <>
-    <ItemDetail product={ productList } />
-    </>
+    useEffect(() => {
+        firestoreFetchOne(itemId)
+            .then(result => setProductList(result))
+            .catch(err => console.log(err))
+    }, []);
     
-
-  )
-
+    return (
+        <ItemDetail item={productList} />
+    );
 }
 
-
-
-export default ItemDetailCointainer;
+export default ItemDetailContainer;

@@ -11,7 +11,7 @@ const Item = (product) => {
     <><div className='container'>
       <div className='col-3 '>
         <div className='card h-100'>
-          <img src={`/img/${product.image}`} alt={product.id} className='card-img-top'></img>
+          <img src={product.image} alt={product.id} className='card-img-top'></img>
           <div className="card-body">
             <h5 className="card-title">{product.tipo}</h5>
             <h6 className="card-text">{product.talles}</h6>

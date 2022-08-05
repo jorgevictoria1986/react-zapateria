@@ -16,7 +16,7 @@
 {"id":16,"tipo":"Sandalias Mujer","talles":"Talles del 35 al 40","image":"m7.png","precio":5600,"categoryId":"2","itemId":"15"},
 {"id":17,"tipo":"Ojotas Mujer","talles":"Talles del 35 al 40","image":"m8.png","precio":4300,"categoryId":"2","itemId":"16"},
 {"id":18,"tipo":"Zapatillas Urbanas Mujer","talles":"Talles del 35 al 40","image":"m9.png","precio":5900,"categoryId":"2","itemId":"17"},
-{"id":19,"tipo":"Zapatillas Urbanas Niño","talles":"Talles del 18 al 34","image":"n1.png","precio":4200,"categoryId":"18","itemId":"18"},
+{"id":19,"tipo":"Zapatillas Urbanas Niño","talles":"Talles del 18 al 34","image":"n1.png","precio":4200,"categoryId":"3","itemId":"18"},
 {"id":20,"tipo":"Zapatillas Urbanas Niño","talles":"Talles del 18 al 34","image":"n2.png","precio":4800,"categoryId":"3","itemId":"19"},
 {"id":21,"tipo":"Sandalias Niño","talles":"Talles del 18 al 34","image":"n3.png","precio":3900,"categoryId":"3","itemId":"20"},
 {"id":22,"tipo":"Sandalias Niño","talles":"Talles del 18 al 34","image":"n4.png","precio":3800,"categoryId":"3","itemId":"21"},
