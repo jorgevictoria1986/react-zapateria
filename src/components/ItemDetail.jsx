@@ -5,7 +5,7 @@ import { useState, useContext  } from 'react';
 import { CartContext } from './CartContext';
 import { TopButton } from './styledComponents';
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ( product ) => {
     const [itemCount, setItemCount] = useState(0);
     const test = useContext(CartContext);
 
@@ -21,7 +21,7 @@ const ItemDetail = ({ product }) => {
     <><div>
             <div>{product.tipo}</div>
             <div>{product.talles}</div>
-            <img src={`/img/${product.image}`} alt={product.id}></img>
+            <img src={product.image} alt={product.id}></img>
             <div>{product.precio}</div>
             {/* {`/dir1/dir2/${elemento.img}`} */}
         </div>
