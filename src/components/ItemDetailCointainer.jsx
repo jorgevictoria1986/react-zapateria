@@ -13,6 +13,8 @@ const ItemDetailContainer = () => {
             .catch(err => console.log(err))
     }, []);
     
+    
+
     return (
         <ItemDetail item={productList} />
     );
