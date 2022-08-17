@@ -1,47 +1,58 @@
 
-import { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import ItemCount from './ItemCount';
-import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price } from './styledComponents';
+import { Link } from 'react-router-dom'
+import { useState, useContext  } from 'react';
 import { CartContext } from './CartContext';
+import { TopButton } from './styledComponents';
+
 
 const ItemDetail = ({product}) => {
     const [itemCount, setItemCount] = useState(0);
     const test = useContext(CartContext);
 
+
     const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
+        alert("Has agregado " + qty + " productos.");
         setItemCount(qty);
         test.addToCart(product, qty);
     }
-
+   
+  
     return (
-        <>
+   
+    <><div>
+            <div>{product.tipo}</div>
+            <div>{product.talles}</div>
+            <img src={product.image} alt={product.id}></img>
+            <div>{product.precio}</div>
+            {/* {`/dir1/dir2/${elemento.img}`} */}
+        </div>
+        <div>
+        
         {
-            product && product.image
-            ? 
-            <DetailContainer>
-                <WrapperDetail>
-                    <ImgContainer>
-                        <ImageDetail src={product.image} />
-                    </ImgContainer>
-                    <InfoContainer>
-                        <Title>{product.tipo}</Title>
-                        <Desc>{product.talles}</Desc>
-                        <Price>$ {product.precio}</Price>
-                        <Desc>{product.stock} unidades en stock</Desc>
-                    </InfoContainer>
-                    {
-                        itemCount === 0
-                        ? <ItemCount stock={product.stock} initial={itemCount} onAdd={onAdd} />
-                        : <Link to='/cart' style={{textDecoration: "none"}}><button variant="contained" color="secondary">CheckOut</button></Link>
-                    }
-                </WrapperDetail>
-            </DetailContainer>
-            : <p>Cargando...</p>
+         
+         itemCount === 0
+        ? <ItemCount stock={5} initial={itemCount} onAdd={onAdd}/>
+        : <Link to='/Cart' style={{textDecoration: 'none'}}><button variant="contained" color="secondary">CheckOut</button></Link>
+           
         }
-        </>
+        
+       
+         </div>
+         
+         <Link to='/'><TopButton>Continuar Compranado</TopButton></Link>
+         
+         </>
+        
+             
     );
+   
 }
 
-export default ItemDetail;
+
+
+
+
+
+export default ItemDetail
