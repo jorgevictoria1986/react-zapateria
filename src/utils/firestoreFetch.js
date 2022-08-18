@@ -15,7 +15,7 @@ export const firestoreFetch = async (idCategory) => {
         ...document.data()
     }));
     return dataFromFirestore;
-}
+};
 
 export const firestoreFetchOne = async (idItem) => {
     const docRef = doc(db, "products", idItem);
@@ -30,4 +30,4 @@ export const firestoreFetchOne = async (idItem) => {
       // doc.data() will be undefined in this case
       console.log("No such document!");
     }
-}
+};

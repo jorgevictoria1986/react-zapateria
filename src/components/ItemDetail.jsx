@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React from 'react'
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom'
 import { useState, useContext  } from 'react';
@@ -21,13 +21,22 @@ const ItemDetail = ({product}) => {
   
     return (
    
-    <><div>
-            <div>{product.tipo}</div>
-            <div>{product.talles}</div>
-            <img src={product.image} alt={product.id}></img>
-            <div>{product.precio}</div>
-            {/* {`/dir1/dir2/${elemento.img}`} */}
+    <><div className='container'>
+      <div className='col-3 '>
+        <div className='card h-100'>
+          <img src={product.image} alt={product.id} className='card-img-top'></img>
+          <div className="card-body">
+            <h5 className="card-title">{product.tipo}</h5>
+            <h6 className="card-text">{product.talles}</h6>
+            <h5 className="card-title">{product.precio}</h5>
+          <div>
+            <Link to={`/item/${product.itemId}`}><button>Ver detalles</button></Link>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+
         <div>
         
         {
