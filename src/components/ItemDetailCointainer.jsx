@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "./ItemDetail";
-import { firestoreFetchOne } from "../utils/firestoreFetch";
+import { firestoreFetchOne, firestoreFetch } from "../utils/firestoreFetch";
 
 const ItemDetailContainer = () => {
     const [productList, setProductList] = useState({});
@@ -11,12 +11,16 @@ const ItemDetailContainer = () => {
         firestoreFetchOne(itemId)
             .then(result => setProductList(result))
             .catch(err => console.log(err))
-    }, []);
+    }, [itemId]);
     
+    // useEffect(() => {
+    //     return (() => {
+    //       setProductList([]);
+    //     })
+    // }, []);
     
-
     return (
-        <ItemDetail item={productList} />
+        <ItemDetail product={productList} />
     );
 }
 
