@@ -7,7 +7,7 @@ import { CartContext } from './CartContext';
 import { TopButton } from './styledComponents';
 
 
-const ItemDetail = (product) => {
+const ItemDetail = ({product}) => {
     const [itemCount, setItemCount] = useState(0);
     const test = useContext(CartContext);
 
